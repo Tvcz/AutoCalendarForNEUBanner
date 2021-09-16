@@ -1,0 +1,47 @@
+div {
+    margin: auto;
+}
+
+.myButtons {
+    margin: auto;
+    padding: 4px;
+    width: 80%;
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #000000;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+    transition: all 0.2s;
+    background-color:#FFFFFF;
+    border-radius: 6px;
+}
+
+.myButtons:hover{
+    color: black;
+    background-color:#e4e4e4;
+}
+
+@media all and (max-width:30em){
+    .myButtons{
+        display:block;
+        margin:0.4em auto;
+    }
+}
+
+#content {
+    border-color: rgb(78, 78, 78);
+    border-style: solid;
+    border-width: 2px;
+    padding: 3px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: green;
+    background-color: black;
+    border-radius: 4px;
+}
