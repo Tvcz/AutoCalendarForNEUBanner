@@ -25,11 +25,10 @@ async function createCalendar(token) {
         responseJson = await response.json();
         let calendarId = await responseJson.id;
 
-        if (await responseJson.ok) {
+        if (response.ok) {
             writeOutput("Created calendar \"" + calendarName + "\"");
             writeOutput("Adding courses to calendar...", "blue");
             return calendarId;
-            break;
         }
         else {
             writeOutput("Fail. (Error " + await responseJson.status + ") Retrying...", "red");
@@ -63,9 +62,6 @@ async function addEventToCalendar(courseInfo, calendarId, token) {
         },
         "description": courseInfo.courseNumber + "\n" + courseInfo.instructors
     };
-
-    console.log("https://www.googleapis.com/calendar/v3/calendars/" + await calendarId + "/events/");
-
 
     let response = await fetch("https://www.googleapis.com/calendar/v3/calendars/" + await calendarId + "/events/", {
         headers: {

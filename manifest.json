@@ -12,7 +12,7 @@
     ],
 
     "oauth2": {
-        "client_id": "270292473526-s02r4cun4mb0n4amkphivknej944oh06.apps.googleusercontent.com",
+        "client_id": "735172450353-4hrsb0qb8njgd2jc9qnnodmort82mko1.apps.googleusercontent.com",
         "scopes": ["https://www.googleapis.com/auth/calendar.app.created"]
      },
  
