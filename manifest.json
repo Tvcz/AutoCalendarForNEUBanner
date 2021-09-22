@@ -1,7 +1,7 @@
 {
     "name": "Auto Calendar for NEU Banner",
-    "description": "Add classes quickly from Northeastern Banner registration schedule to Google Calendar.",
-    "version": "0.0.0.2",
+    "description": "Add classes quickly from your Northeastern Banner registration schedule to Google Calendar.",
+    "version": "0.0.0.3",
     "manifest_version": 3,
 
     "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnix5QO59z7Yg3//UzwguKTQEqObSdC9CuUjcJSJBJuLhYx14RnywEW8GnQHfips+AP/5zsxrSi9lpV+9CzWKdSaIQL4ZN1T7lhLdx4j465Oe/EXiPsBV09SK/ScXRffsxZ+v5oJvAVUmvcSScpUrAW6GeyiVnP2y45GUyPLwGZ6VQyVlOZAZ8lIhxcb/jzxvpxo/I++OamaLZWF3NLOhJjkXlQ7NBd/FKfNAQBUEuzHwbdLULZ0H6eq/8LwVaO4yDbNYDiFLrQArtRUOpqRsyq/LzojA9+iBL/Q9NTOP+UNWnTHZj9FKwM9elHW3VSnHo/UfDy9/HJg9I8pilBiY+wIDAQAB",
