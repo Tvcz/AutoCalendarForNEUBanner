@@ -3,11 +3,9 @@ A chrome extension that automates the transfer of course information from the NE
 
 Chrome Web Store page: https://chrome.google.com/webstore/detail/auto-calendar-for-neu-ban/ghlkconfjghdijoedgiekdanomejhpkm
 
-\
-
-\
-
-\
+<br />
+<br />
+<br />
 
 ### Installing from Source
 
