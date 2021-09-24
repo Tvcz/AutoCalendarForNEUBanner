@@ -5,7 +5,7 @@ Chrome Web Store page: https://chrome.google.com/webstore/detail/auto-calendar-f
 
 <br />
 
-### Installing from Source
+## Installing from Source
 
 Alternatively, If you want to install from the source code directly, do the following:
 1) Download this repository (there should be a button near the top of the page).
