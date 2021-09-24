@@ -31,15 +31,16 @@ async function createCalendar(token) {
             return calendarId;
         }
         else {
-            writeOutput("Fail. (Error " + await responseJson.status + ") Retrying...", "red");
+            writeOutput("Fail. (Error " + response.status + ") Retrying...", "red");
             await new Promise(r => setTimeout(r, i*150));
             continue;
         }
     }
+    console.log(await responseJson);
     return 1;
 }
 
-async function addEventToCalendar(courseInfo, calendarId, token) { 
+async function addEventToCalendar(courseInfo, calendarId, token, color) { 
     var event = {
         "summary": courseInfo.courseName,
         "location": courseInfo.location,
@@ -53,6 +54,7 @@ async function addEventToCalendar(courseInfo, calendarId, token) {
         },
         "recurrence": [
             "RRULE:FREQ=WEEKLY;UNTIL=" + courseInfo.dateEnd + ";BYDAY=" + courseInfo.daysOfWeek,
+            "EXDATE;TZID=America/New_York;VALUE=DATE-TIME:" + courseInfo.dateBegin.replace(/-/g, "") + "T" + courseInfo.timeBegin.replace(/:/g, ""),
         ],
         "reminders": {
             "useDefault": false,
@@ -60,6 +62,10 @@ async function addEventToCalendar(courseInfo, calendarId, token) {
                 {"method": "popup", "minutes": 30}
             ]
         },
+        "creator": {
+            "displayName": "Auto Calendar for NEU Banner"
+        },
+        "colorId": (color<=11) ? color : Math.floor((Math.random() * 11) + 1),
         "description": courseInfo.courseNumber + "\n" + courseInfo.instructors
     };
 
@@ -71,6 +77,7 @@ async function addEventToCalendar(courseInfo, calendarId, token) {
         method: "POST", 
         body: JSON.stringify(event)
     })
+
     if (response.ok) {
         writeOutput(courseInfo.courseName + " added to calendar.");
         return 200;

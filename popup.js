@@ -62,7 +62,7 @@ function addScheduleToCalendar(scheduleArray) {
             let calendarId = createCalendar(token);
             for (i=0; i<scheduleArray.length; i++) {
                 if (scheduleArray[i].location != null) {
-                    code = await addEventToCalendar(scheduleArray[i], calendarId, token);
+                    code = await addEventToCalendar(scheduleArray[i], calendarId, token, i+1);
                     if (code == 403) {
                         writeOutput("Fail. (Error 403) Retrying...", "red");
                         for(i=1; i++; i<=5) {

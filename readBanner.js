@@ -104,10 +104,10 @@ function formatCourseInfo(courseInfo) {
     courseInfo.timeEnd = formatTime(courseInfo.timeEnd);
 
     courseInfo.dateBegin = removeSpaces(courseInfo.dateBegin);
-    courseInfo.dateBegin = formatDate(courseInfo.dateBegin);
+    courseInfo.dateBegin = formatDateBegin(courseInfo.dateBegin);
     
     courseInfo.dateEnd = removeSpaces(courseInfo.dateEnd);
-    courseInfo.dateEnd = formatDate(courseInfo.dateEnd).replace(/-/g,"");
+    courseInfo.dateEnd = formatDateEnd(courseInfo.dateEnd);
     
     courseInfo.location = removeSpaces(courseInfo.location);
     if (courseInfo.location.substring(0,4) === "None") {
@@ -139,7 +139,18 @@ function formatTime(time) {
     return time;
 }
 
-function formatDate(date) {
-    date = date.substring(6) + "-" + date.substring(0,2) + "-" + date.substring(3,5);
+function formatDateBegin(date) {
+    date = date.substring(0,2) + "/" + date.substring(3,5) + "/" + date.substring(6);
+    let dateBefore = new Date(date);
+    dateBefore.setDate(dateBefore.getDate() - 1);
+    date = dateBefore.getFullYear() + "-" + ("0" + (dateBefore.getMonth()+1)).slice(-2) + "-" + ("0" + dateBefore.getDate()).slice(-2);
+    return date;
+}
+
+function formatDateEnd(date) {
+    date = date.substring(6) + "/" + date.substring(0,2) + "/" + date.substring(3,5);
+    let dateAfter = new Date(date);
+    dateAfter.setDate(dateAfter.getDate() + 1);
+    date = dateAfter.getFullYear() + ("0" + (dateAfter.getMonth()+1)).slice(-2) + ("0" + dateAfter.getDate()).slice(-2);
     return date;
 }
