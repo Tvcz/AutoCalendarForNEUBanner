@@ -5,7 +5,6 @@ Chrome Web Store page: https://chrome.google.com/webstore/detail/auto-calendar-f
 
 <br />
 <br />
-<br />
 
 ### Installing from Source
 
