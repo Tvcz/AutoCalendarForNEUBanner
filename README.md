@@ -3,6 +3,9 @@ A chrome extension that automates the transfer of course information from the NE
 
 Chrome Web Store page: https://chrome.google.com/webstore/detail/auto-calendar-for-neu-ban/ghlkconfjghdijoedgiekdanomejhpkm
 
+
+### Installing from Source
+
 Alternatively, If you want to install from the source code directly, do the following:
 1) Download this repository (there should be a button near the top of the page).
 2) Extract the zipped file to a folder.
